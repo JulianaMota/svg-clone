@@ -1,6 +1,16 @@
 window.addEventListener("load", pageLoaded);
 
 function pageLoaded() {
+  //selector solution
+  const bullets = document.querySelectorAll(".circle:nth-child(n+3)");
+  bullets.forEach(createClone);
+
+  //the climsy js-solution
+  //   const bullets = document.querySelectorAll(".circle");
+  //   for (let i = 2; i < bullets.length; i++) {
+  //     createClone(bullets[i]);
+  //   }
+
   const textBullet = document.querySelector("#testbullet");
   // find the <g> in #textlines to use as a template
   createClone(textBullet);
